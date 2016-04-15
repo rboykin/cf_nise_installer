@@ -8,10 +8,10 @@ if [ ! -d ~/.rbenv ]; then
     echo 'eval "$(rbenv init -)"' >> ~/.profile
 fi
 source ~/.profile
-if ! (rbenv versions | grep -q 1.9.3-p484); then
-    rbenv install 1.9.3-p484
+if ! (rbenv versions | grep -q 2.1.8); then
+    rbenv install 2.1.8
 fi
-rbenv local 1.9.3-p484
+rbenv local 2.1.8
 
 gem install bundler --no-rdoc --no-ri
 rbenv rehash
