@@ -283,7 +283,7 @@ properties:
         id: cf
         override: true
         authorized-grant-types: implicit,password,refresh_token
-        scope: cloud_controller.read,cloud_controller.write,openid,password.write,cloud_controller.admin,scim.read,scim.write,doppler.firehose,uaa.user,routing.router_groups.read
+        scope: cloud_controller.read,cloud_controller.write,openid,password.write,cloud_controller.admin,scim.read,scim.write,doppler.firehose,uaa.user,routing.router_groups.read,routing.router_groups.write
         authorities: uaa.none
         access-token-validity: 600
         refresh-token-validity: 2592000
@@ -465,7 +465,7 @@ properties:
   router:
     port: 8888
     enable_routing_api: false
-    debug_addr: 0.0.0.0:17000
+    debug_address: 0.0.0.0:17000
     status:
       port: 18888
       user: gorouter
@@ -535,6 +535,11 @@ properties:
     enabled: true
 
   hm9000:
+    etcd:
+      machines: [192.168.10.10]
+      peer_require_ssl: false
+      require_ssl: false
+    url: https://hm9000.192.168.10.10.xip.io
     port: 5155
     ca_cert: |
       -----BEGIN CERTIFICATE-----
