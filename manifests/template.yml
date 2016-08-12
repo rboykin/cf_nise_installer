@@ -153,6 +153,7 @@ properties:
         provider: Local
         local_root: /var/vcap/nfs/shared
     dea_use_https: false
+    run_prestart_migrations: false
 
   ccng: *cc
 
