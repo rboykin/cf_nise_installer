@@ -299,13 +299,6 @@ properties:
     machines:
       - 192.168.10.10
 
-  etcd_metrics_server:
-    nats:
-      username: nats
-      password: c1oudc0w
-      machines:
-        - 192.168.10.10
-
   consul:
     agent:
       mode: server
