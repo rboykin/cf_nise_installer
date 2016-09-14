@@ -291,7 +291,15 @@ properties:
 
     scim:
       users:
-      - admin|c1oudc0w|scim.write,scim.read,openid,cloud_controller.admin,doppler.firehose,uaa.admin,password.write
+        - name: admin
+          password: c1oudc0w
+          groups:
+            - scim.write
+            - scim.read
+            - openid
+            - cloud_controller.admin
+            - doppler.firehose
+            - routing.router_groups.read
 
   etcd:
     require_ssl: false
