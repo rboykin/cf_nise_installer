@@ -205,6 +205,7 @@ properties:
   db: databases
 
   uaa:
+    port: 8083
     login:
       addnew: false
       client_secret: c1oudc0w
@@ -316,7 +317,12 @@ properties:
         - 192.168.10.10
       services:
         cloud_controller_ng: {}
+        etcd:
+          name: cf-etcd
+        gorouter: {}
         hm9000: {}
+        loggregator_trafficcontroller: {}
+        uaa: {}
         dea:
           check:
             name: dns_health_check
@@ -689,11 +695,15 @@ properties:
     - name: api
       port: 9022
       registration_interval: 20s
+      tags:
+        component: CloudController
       uris:
       - "api.192.168.10.10.xip.io"
     - name: hm9000
       port: 5155
       registration_interval: 20s
+      tags:
+        component: HM9K
       uris:
       - "hm9000.192.168.10.10.xip.io"
     - name: doppler
@@ -707,8 +717,11 @@ properties:
       uris:
       - "loggregator.192.168.10.10.xip.io"
     - name: uaa
-      port: 8080
-      registration_interval: 20s
+      port: 8083
+      registration_interval: 4s
+      health_check:
+        name: uaa-healthcheck
+        script_path: /var/vcap/jobs/uaa/bin/health_check
       uris:
       - "uaa.192.168.10.10.xip.io"
       - "*.uaa.192.168.10.10.xip.io"
