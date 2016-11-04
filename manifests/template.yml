@@ -83,7 +83,7 @@ properties:
     staging_upload_password: c1oudc0w
     install_buildpacks:
       - name: java_buildpack
-        package: buildpack_java_offline
+        package: java-offline-buildpack
       - name: ruby_buildpack
         package: ruby-buildpack
       - name: nodejs_buildpack
@@ -317,6 +317,7 @@ properties:
         - 192.168.10.10
       services:
         cloud_controller_ng: {}
+        doppler: {}
         etcd:
           name: cf-etcd
         gorouter: {}
