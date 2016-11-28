@@ -312,7 +312,7 @@ properties:
     - instances: 1
       name: etcd_z1
     ca_cert: |
-    -----BEGIN CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
       MIIE4jCCAsqgAwIBAgIBATANBgkqhkiG9w0BAQsFADARMQ8wDQYDVQQDEwZldGNk
       Q0EwHhcNMTYxMTI4MTcwMDUwWhcNMjYxMTI4MTcwMDUyWjARMQ8wDQYDVQQDEwZl
       dGNkQ0EwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQC4gYS+6qeWSnvU
