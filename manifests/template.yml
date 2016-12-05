@@ -31,6 +31,7 @@ jobs:
       - binary-buildpack
       - go-buildpack
       - staticfile-buildpack
+      - statsd-injector
 
 properties:
   networks:
@@ -716,6 +717,43 @@ properties:
 
   login:
     enabled: false
+    saml:
+      serviceProviderCertificate: |
+        -----BEGIN CERTIFICATE-----
+        MIIC6DCCAlGgAwIBAgIJAIWuHVjitcU8MA0GCSqGSIb3DQEBCwUAMIGMMQswCQYD
+        VQQGEwJVUzEOMAwGA1UECAwFVGV4YXMxDzANBgNVBAcMBkF1c3RpbjEMMAoGA1UE
+        CgwDSUJNMRAwDgYDVQQLDAdCbHVlbWl4MRkwFwYDVQQDDBBKIFJ1c3NlbGwgQm95
+        a2luMSEwHwYJKoZIhvcNAQkBFhJyYm95a2luQHVzLmlibS5jb20wHhcNMTYxMjA1
+        MTQwNzQ4WhcNMjYxMjAzMTQwNzQ4WjCBjDELMAkGA1UEBhMCVVMxDjAMBgNVBAgM
+        BVRleGFzMQ8wDQYDVQQHDAZBdXN0aW4xDDAKBgNVBAoMA0lCTTEQMA4GA1UECwwH
+        Qmx1ZW1peDEZMBcGA1UEAwwQSiBSdXNzZWxsIEJveWtpbjEhMB8GCSqGSIb3DQEJ
+        ARYScmJveWtpbkB1cy5pYm0uY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKB
+        gQC/SpneCG14/b5QaHg01XUXFwieDAdK74CKGG1iW1QtJfYXdXuR3bi93R07fQ7N
+        0sUdFVf6hE9gxWz1QEhCh1WDGrL8LlP+a07WSoN43bfe8h66xdyVBaSSdq08VzJP
+        qhfP+Lfmy0LkmVRaTm25b2jiBQZEvaaJArkTn9u+Mbiu6wIDAQABo1AwTjAdBgNV
+        HQ4EFgQUuKqHZtiuQb2s4mkM+C3FurKl1S4wHwYDVR0jBBgwFoAUuKqHZtiuQb2s
+        4mkM+C3FurKl1S4wDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOBgQADebLC
+        rmNbKslloIKRoUqDgKxRtTI/12WNXsg01SJE1zSDfihYFdaB/PAXLi6h5TWYnQIQ
+        r9wyOKCoXLZs54oSBYWtJus4QxRjiYM0QiNRkR3cUi7v999sMCoRhyA78DV017Eu
+        xff71vvILJxVLoJ1qpPLUa5VDT9xp7FwXSCaig==
+        -----END CERTIFICATE-----
+      serviceProviderKeyPassword: password
+      serviceProviderKey: |
+        -----BEGIN RSA PRIVATE KEY-----
+        MIICXgIBAAKBgQC/SpneCG14/b5QaHg01XUXFwieDAdK74CKGG1iW1QtJfYXdXuR
+        3bi93R07fQ7N0sUdFVf6hE9gxWz1QEhCh1WDGrL8LlP+a07WSoN43bfe8h66xdyV
+        BaSSdq08VzJPqhfP+Lfmy0LkmVRaTm25b2jiBQZEvaaJArkTn9u+Mbiu6wIDAQAB
+        AoGBAIrO04BulSGq3yLx6+hKzMCIklQ9Xj1eNeP/fcBVjWuFlGHJenWKcrgzbzbv
+        tIJeY3KLPmAnCoKqQDpm/whntABAeL+oXhsnwvfA/neZjaPWDkYvTTvsFr0WCgey
+        PEijmL4empVbjvNss3rFA7UVj7DdGz5qN1P59PhDqALea6pBAkEA785+usBhux35
+        PiUNeBh6/OPMwCtaiKU/trbPa93rD+oZ5NHFSA1nzYZDC2LuCdQWxP3GfHEDXO+p
+        ErgvY6Us0wJBAMw1bhfAo5yVuW8KVPXBKuB7p7tM9Kw5sQlZo08XAoW3GddjiVSs
+        7wyqtz7qhwu4zgYGJhI8vsQ1BhPHushmRokCQQCB8/ozQ+vyVeTqq3OoIEQN5Xjg
+        rt3J7Rsg7eJrxwAKSMete4wYZsNY2ihc9Eig5OFN8WRtrWSwKWQLM+riafFnAkEA
+        naW54jhjlqS3zRNq13ZSxY5wxNX6JWM8Wv2KZ6pZ1iSunGtJP8dpnJvGb5nau5/l
+        3RyuE3I1y38ru+V7Ou5KEQJAHgP3XOOeQq6Qpsi3bAkv/CzsAC33q8wzsyz5IuvV
+        zJFQYmWiTVCzv9OrcWqhfbK02fVfubo0hzPTnmEWusFiPA==
+        -----END RSA PRIVATE KEY-----
 
   loggregator:
     incoming_port: 13456
