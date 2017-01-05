@@ -155,6 +155,10 @@ properties:
         local_root: /var/vcap/nfs/shared
     dea_use_https: false
     run_prestart_migrations: false
+    mutual_tls:
+      ca_cert: ""
+      public_cert: ""
+      private_key: ""
 
   ccng: *cc
 
@@ -275,11 +279,11 @@ properties:
         secret: c1oudc0w
         authorized-grant-types: client_credentials
       tcp_emitter:
-        authorities: routing.routes.write,routing.routes.read,routing.router_groups.read
+        authorities: routing.routes.write,routing.routes.read
         authorized-grant-types: client_credentials,refresh_token
         secret: c1oudc0w
       tcp_router:
-        authorities: routing.routes.read,routing.router_groups.read
+        authorities: routing.routes.read
         authorized-grant-types: client_credentials,refresh_token
         secret: c1oudc0w
       cf:
