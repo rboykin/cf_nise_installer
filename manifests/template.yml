@@ -378,7 +378,6 @@ properties:
         authorities: uaa.none
         access-token-validity: 600
         refresh-token-validity: 2592000
-
     scim:
       users:
         - name: admin
@@ -390,6 +389,10 @@ properties:
             - cloud_controller.admin
             - doppler.firehose
             - routing.router_groups.read
+    zones:
+      internal:
+        hostnames:
+        - uaa.service.cf.internal
 
   etcd:
     advertise_urls_dns_suffix: cf-etcd.service.cf.internal
