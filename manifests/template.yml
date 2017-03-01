@@ -31,7 +31,6 @@ jobs:
       - binary-buildpack
       - go-buildpack
       - staticfile-buildpack
-      - statsd-injector
 
 properties:
   networks:
@@ -432,6 +431,7 @@ properties:
         override: true
         authorities: uaa.resource
         secret: c1oudc0w
+        authorized-grant-types: client_credentials
       cloud_controller_username_lookup:
         authorities: scim.userids
         secret: c1oudc0w
