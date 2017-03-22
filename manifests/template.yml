@@ -933,6 +933,9 @@ properties:
     dropsonde_incoming_port: 13457
     outgoing_dropsonde_port: 18081
     doppler_port: 8081
+    uaa:
+      client: doppler
+      client_secret: c1oudc0w
     etcd:
       machines: [cf-etcd.service.cf.internal]
       ca_cert: |
@@ -1226,7 +1229,6 @@ properties:
       port: 6799
     incoming_port: 3456
     dropsonde_incoming_port: 3457
-    deployment: default
     etcd:
       client_cert: |
         -----BEGIN CERTIFICATE-----
