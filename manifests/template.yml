@@ -881,6 +881,7 @@ properties:
     port: 8888
     enable_routing_api: false
     debug_address: 0.0.0.0:17000
+    route_services_secret: c1oudc0w
     status:
       port: 18888
       user: gorouter
