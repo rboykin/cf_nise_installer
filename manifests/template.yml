@@ -154,6 +154,7 @@ properties:
         local_root: /var/vcap/nfs/shared
     dea_use_https: false
     run_prestart_migrations: false
+    volume_services_enabled: true
     mutual_tls:
       ca_cert: |
         -----BEGIN CERTIFICATE-----
