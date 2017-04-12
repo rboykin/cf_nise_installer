@@ -65,6 +65,7 @@ properties:
     server_key:
 
   cc: &cc
+    allow_app_ssh_access: false
     bulk_api_password: c1oudc0w
     srv_api_uri: https://api.192.168.10.10.xip.io
     db_logging_level: debug2
