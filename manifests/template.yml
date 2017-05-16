@@ -440,7 +440,7 @@ properties:
         authorized-grant-types: client_credentials
       gorouter:
         authorities: routing.routes.read
-        authorized-grant-types: client_credentials,refresh_token
+        authorized-grant-types: client_credentials
         secret: c1oudc0w
       cc_routing:
         authorities: routing.router_groups.read
@@ -448,11 +448,11 @@ properties:
         authorized-grant-types: client_credentials
       tcp_emitter:
         authorities: routing.routes.write,routing.routes.read
-        authorized-grant-types: client_credentials,refresh_token
+        authorized-grant-types: client_credentials
         secret: c1oudc0w
       tcp_router:
         authorities: routing.routes.read
-        authorized-grant-types: client_credentials,refresh_token
+        authorized-grant-types: client_credentials
         secret: c1oudc0w
       cf:
         id: cf
